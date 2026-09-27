@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Générateur de Citations</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #06b6d4);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .carte {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      max-width: 500px;
+      text-align: center;
+    }
+    h1 {
+      color: #1e293b;
+      margin-top: 0;
+      font-size: 22px;
+    }
+    blockquote {
+      font-size: 18px;
+      font-style: italic;
+      color: #475569;
+      margin: 25px 0;
+      min-height: 60px;
+    }
+    button {
+      background-color: #4f46e5;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #3730a3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carte">
+    <h1>💡 Citation du Jour</h1>
+    <blockquote id="citation">"Cliquez sur le bouton pour afficher une citation !"</blockquote>
+    <button onclick="genererCitation()">Nouvelle citation 🎲</button>
+  </div>
+
+  <script>
+    const citations = [
+      "« Le succès, c’est de tomber sept fois et de se relever huit. » – Proverbe japonais",
+      "« La seule façon de faire du bon travail est d’aimer ce que vous faites. » – Steve Jobs",
+      "« Il semble toujours impossible jusqu'à ce qu'on le fasse. » – Nelson Mandela",
+      "« Le meilleur moyen de prédire l'avenir, c'est de le créer. » – Peter Drucker",
+      "« Apprendre à coder, c'est acquérir un super-pouvoir pour façonner le monde. »"
+    ];
+
+    function genererCitation() {
+      const indexAleatoire = Math.floor(Math.random() * citations.length);
+      document.getElementById('citation').innerText = citations[indexAleatoire];
+    }
+  </script>
+
+</body>
+</html>

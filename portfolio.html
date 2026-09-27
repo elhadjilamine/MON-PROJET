@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - EL HADJI LAMINE TOUTY SOKHNA</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8fafc;
+      color: #334155;
+    }
+    header {
+      background-color: #0f172a;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .conteneur {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 8px;
+    }
+    .projet-carte {
+      border: 1px solid #e2e8f0;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+      background-color: #f1f5f9;
+    }
+    /* Style du Formulaire */
+    .champ-formulaire {
+      margin-bottom: 15px;
+    }
+    .champ-formulaire label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .champ-formulaire input, .champ-formulaire textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    .bouton-envoyer {
+      background-color: #0f172a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .bouton-envoyer:hover {
+      background-color: #0284c7;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #64748b;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>EL HADJI LAMINE TOUTY SOKHNA</h1>
+    <p>Développeur Web en Formation</p>
+    <nav>
+      <a href="#a-propos">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="conteneur" id="a-propos">
+    <h2>À propos de moi</h2>
+    <p>Passionné par le développement web, j'apprends à concevoir des sites web modernes, réactifs et interactifs en utilisant HTML5, CSS3 et JavaScript.</p>
+  </div>
+
+  <div class="conteneur" id="projets">
+    <h2>Mes Projets</h2>
+    
+    <div class="projet-carte">
+      <h3>1. Carte de Profil Interactive</h3>
+      <p>Une application simple affichant un profil avec un changement de thème dynamique en JavaScript.</p>
+      <a href="index.html" target="_blank" style="display: inline-block; margin-top: 10px; background-color: #007bff; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: bold;">Voir le projet 🚀</a>
+    </div>
+
+    <div class="projet-carte">
+      <h3>2. Générateur de Citations Motivantes</h3>
+      <p>Une application JavaScript permettant de générer aléatoirement des citations inspirantes au clic d'un bouton.</p>
+      <a href="citations.html" target="_blank" style="display: inline-block; margin-top: 10px; background-color: #4f46e5; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-size: 14px; font-weight: bold;">Voir le projet 🎲</a>
+    </div>
+  </div>
+
+  <div class="conteneur" id="contact">
+    <h2>Me Contacter</h2>
+    
+    <form id="formulaire-contact">
+      <div class="champ-formulaire">
+        <label for="nom">Votre nom :</label>
+        <input type="text" id="nom" placeholder="Ex: Moussa Diop" required>
+      </div>
+
+      <div class="champ-formulaire">
+        <label for="message">Votre message :</label>
+        <textarea id="message" rows="4" placeholder="Écrivez votre message ici..." required></textarea>
+      </div>
+
+      <button type="submit" class="bouton-envoyer">Envoyer le message ✉️</button>
+    </form>
+
+    <p style="margin-top: 20px;">WhatsApp : <a href="https://wa.me/" target="_blank" style="color: #25D366; font-weight: bold;">Discuter sur WhatsApp</a></p>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 EL HADJI LAMINE TOUTY SOKHNA - Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    document.getElementById('formulaire-contact').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nom = document.getElementById('nom').value;
+      alert("Merci " + nom + " ! Votre message a bien été envoyé.");
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
